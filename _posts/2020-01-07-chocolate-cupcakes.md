@@ -1,6 +1,6 @@
 ---
-date: 2017-01-07
-title: Chocolate Cupcakes
+date: 2020-01-07
+title: קפקייק שוקולד
 categories:
   - Cupcakes
   - Cakes

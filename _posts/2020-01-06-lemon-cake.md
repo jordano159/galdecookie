@@ -1,6 +1,6 @@
 ---
-date: 2017-01-06
-title: Lemon Cake
+date: 2020-01-06
+title: עוגת לימון
 categories:
   - Cakes
 featured_image: https://source.unsplash.com/NAN22eh754c/1560x940
