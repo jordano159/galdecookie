@@ -2,7 +2,7 @@
 date: 2020-01-06
 title: עוגת לימון
 categories:
-  - Cakes
+  - עוגות
 featured_image: https://source.unsplash.com/NAN22eh754c/1560x940
 recipe:
   servings: 12 slices
