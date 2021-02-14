@@ -1,0 +1,1010 @@
+current directory: /home/jordan/Programming/galblog/vendor/bundle/ruby/2.6.0/gems/eventmachine-1.2.7/ext
+/home/jordan/.rvm/rubies/ruby-2.6.6/bin/ruby -I /home/jordan/.rvm/rubies/ruby-2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210214-25175-33q430.rb extconf.rb
+checking for -lcrypto... yes
+checking for -lssl... yes
+checking for openssl/ssl.h... yes
+checking for openssl/err.h... yes
+checking for rb_trap_immediate in ruby.h,rubysig.h... no
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_without_gvl() in ruby/thread.h... yes
+checking for rb_thread_fd_select()... yes
+checking for rb_fdset_t in ruby/intern.h... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_enable_interrupt()... no
+checking for rb_time_new()... yes
+checking for inotify_init() in sys/inotify.h... yes
+checking for writev() in sys/uio.h... yes
+checking for pipe2() in unistd.h... yes
+checking for accept4() in sys/socket.h... yes
+checking for SOCK_CLOEXEC in sys/socket.h... yes
+checking for sys/event.h... no
+checking for epoll_create() in sys/epoll.h... yes
+checking for clock_gettime()... yes
+checking for CLOCK_MONOTONIC_RAW in time.h... yes
+checking for CLOCK_MONOTONIC in time.h... yes
+CXXFLAGS=$(cxxflags) -Wall -Wextra -Wno-deprecated-declarations -Wno-ignored-qualifiers -Wno-unused-result -Wno-address
+creating Makefile
+
+current directory: /home/jordan/Programming/galblog/vendor/bundle/ruby/2.6.0/gems/eventmachine-1.2.7/ext
+make "DESTDIR=" clean
+
+current directory: /home/jordan/Programming/galblog/vendor/bundle/ruby/2.6.0/gems/eventmachine-1.2.7/ext
+make "DESTDIR="
+compiling binder.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+In file included from project.h:167,
+                 from binder.cpp:20:
+binder.h:41:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   41 |   const uintptr_t GetBinding() {return Binding;}
+      |   ^~~~~
+In file included from project.h:168,
+                 from binder.cpp:20:
+em.h:145:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  145 |   const uintptr_t InstallOneshotTimer (uint64_t);
+      |   ^~~~~
+em.h:146:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  146 |   const uintptr_t ConnectToServer (const char *, int, const char *, int);
+      |   ^~~~~
+em.h:147:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  147 |   const uintptr_t ConnectToUnixServer (const char *);
+      |   ^~~~~
+em.h:149:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  149 |   const uintptr_t CreateTcpServer (const char *, int);
+      |   ^~~~~
+em.h:150:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  150 |   const uintptr_t OpenDatagramSocket (const char *, int);
+      |   ^~~~~
+em.h:151:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 |   const uintptr_t CreateUnixDomainServer (const char*);
+      |   ^~~~~
+em.h:152:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  152 |   const uintptr_t AttachSD (SOCKET);
+      |   ^~~~~
+em.h:153:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  153 |   const uintptr_t OpenKeyboard();
+      |   ^~~~~
+em.h:155:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  155 |   const uintptr_t Socketpair (char* const*);
+      |   ^~~~~
+em.h:161:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  161 |   const uintptr_t AttachFD (SOCKET, bool);
+      |   ^~~~~
+em.h:178:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  178 |   const uintptr_t WatchFile (const char*);
+      |   ^~~~~
+em.h:187:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  187 |   const uintptr_t WatchPid (int);
+      |   ^~~~~
+In file included from project.h:172,
+                 from binder.cpp:20:
+eventmachine.h:54:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   54 |  const uintptr_t evma_install_oneshot_timer (uint64_t milliseconds);
+      |  ^~~~~
+eventmachine.h:55:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   55 |  const uintptr_t evma_connect_to_server (const char *bind_addr, int bind_port, const char *server, int port);
+      |  ^~~~~
+eventmachine.h:56:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   56 |  const uintptr_t evma_connect_to_unix_server (const char *server);
+      |  ^~~~~
+eventmachine.h:58:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   58 |  const uintptr_t evma_attach_fd (int file_descriptor, int watch_mode);
+      |  ^~~~~
+eventmachine.h:73:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   73 |  const uintptr_t evma_create_tcp_server (const char *address, int port);
+      |  ^~~~~
+eventmachine.h:74:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   74 |  const uintptr_t evma_create_unix_domain_server (const char *filename);
+      |  ^~~~~
+eventmachine.h:75:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   75 |  const uintptr_t evma_attach_sd (int sd);
+      |  ^~~~~
+eventmachine.h:76:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   76 |  const uintptr_t evma_open_datagram_socket (const char *server, int port);
+      |  ^~~~~
+eventmachine.h:77:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   77 |  const uintptr_t evma_open_keyboard();
+      |  ^~~~~
+In file included from project.h:172,
+                 from binder.cpp:20:
+eventmachine.h:119:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  119 |  const uintptr_t evma_popen (char * const*cmd_strings);
+      |  ^~~~~
+eventmachine.h:121:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  121 |  const uintptr_t evma_watch_filename (const char *fname);
+      |  ^~~~~
+eventmachine.h:124:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  124 |  const uintptr_t evma_watch_pid (int);
+      |  ^~~~~
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling cmain.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+In file included from project.h:167,
+                 from cmain.cpp:20:
+binder.h:41:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   41 |   const uintptr_t GetBinding() {return Binding;}
+      |   ^~~~~
+In file included from project.h:168,
+                 from cmain.cpp:20:
+em.h:145:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  145 |   const uintptr_t InstallOneshotTimer (uint64_t);
+      |   ^~~~~
+em.h:146:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  146 |   const uintptr_t ConnectToServer (const char *, int, const char *, int);
+      |   ^~~~~
+em.h:147:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  147 |   const uintptr_t ConnectToUnixServer (const char *);
+      |   ^~~~~
+em.h:149:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  149 |   const uintptr_t CreateTcpServer (const char *, int);
+      |   ^~~~~
+em.h:150:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  150 |   const uintptr_t OpenDatagramSocket (const char *, int);
+      |   ^~~~~
+em.h:151:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 |   const uintptr_t CreateUnixDomainServer (const char*);
+      |   ^~~~~
+em.h:152:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  152 |   const uintptr_t AttachSD (SOCKET);
+      |   ^~~~~
+em.h:153:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  153 |   const uintptr_t OpenKeyboard();
+      |   ^~~~~
+em.h:155:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  155 |   const uintptr_t Socketpair (char* const*);
+      |   ^~~~~
+em.h:161:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  161 |   const uintptr_t AttachFD (SOCKET, bool);
+      |   ^~~~~
+em.h:178:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  178 |   const uintptr_t WatchFile (const char*);
+      |   ^~~~~
+em.h:187:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  187 |   const uintptr_t WatchPid (int);
+      |   ^~~~~
+In file included from project.h:172,
+                 from cmain.cpp:20:
+eventmachine.h:54:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   54 |  const uintptr_t evma_install_oneshot_timer (uint64_t milliseconds);
+      |  ^~~~~
+eventmachine.h:55:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   55 |  const uintptr_t evma_connect_to_server (const char *bind_addr, int bind_port, const char *server, int port);
+      |  ^~~~~
+eventmachine.h:56:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   56 |  const uintptr_t evma_connect_to_unix_server (const char *server);
+      |  ^~~~~
+eventmachine.h:58:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   58 |  const uintptr_t evma_attach_fd (int file_descriptor, int watch_mode);
+      |  ^~~~~
+eventmachine.h:73:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   73 |  const uintptr_t evma_create_tcp_server (const char *address, int port);
+      |  ^~~~~
+eventmachine.h:74:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   74 |  const uintptr_t evma_create_unix_domain_server (const char *filename);
+      |  ^~~~~
+eventmachine.h:75:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   75 |  const uintptr_t evma_attach_sd (int sd);
+      |  ^~~~~
+eventmachine.h:76:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   76 |  const uintptr_t evma_open_datagram_socket (const char *server, int port);
+      |  ^~~~~
+eventmachine.h:77:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   77 |  const uintptr_t evma_open_keyboard();
+      |  ^~~~~
+In file included from project.h:172,
+                 from cmain.cpp:20:
+eventmachine.h:119:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  119 |  const uintptr_t evma_popen (char * const*cmd_strings);
+      |  ^~~~~
+eventmachine.h:121:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  121 |  const uintptr_t evma_watch_filename (const char *fname);
+      |  ^~~~~
+eventmachine.h:124:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  124 |  const uintptr_t evma_watch_pid (int);
+      |  ^~~~~
+cmain.cpp:103:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  103 | extern "C" const uintptr_t evma_install_oneshot_timer (uint64_t milliseconds)
+      |            ^~~~~
+cmain.cpp:114:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  114 | extern "C" const uintptr_t evma_connect_to_server (const char *bind_addr, int bind_port, const char *server, int port)
+      |            ^~~~~
+cmain.cpp:124:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  124 | extern "C" const uintptr_t evma_connect_to_unix_server (const char *server)
+      |            ^~~~~
+cmain.cpp:134:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  134 | extern "C" const uintptr_t evma_attach_fd (int file_descriptor, int watch_mode)
+      |            ^~~~~
+cmain.cpp:277:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  277 | extern "C" const uintptr_t evma_create_tcp_server (const char *address, int port)
+      |            ^~~~~
+cmain.cpp:287:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  287 | extern "C" const uintptr_t evma_create_unix_domain_server (const char *filename)
+      |            ^~~~~
+cmain.cpp:297:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  297 | extern "C" const uintptr_t evma_attach_sd (int sd)
+      |            ^~~~~
+cmain.cpp:307:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  307 | extern "C" const uintptr_t evma_open_datagram_socket (const char *address, int port)
+      |            ^~~~~
+cmain.cpp:317:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  317 | extern "C" const uintptr_t evma_open_keyboard()
+      |            ^~~~~
+cmain.cpp:327:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  327 | extern "C" const uintptr_t evma_watch_filename (const char *fname)
+      |            ^~~~~
+cmain.cpp:347:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  347 | extern "C" const uintptr_t evma_watch_pid (int pid)
+      |            ^~~~~
+cmain.cpp:782:12: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  782 | extern "C" const uintptr_t evma_popen (char * const*cmd_strings)
+      |            ^~~~~
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling ed.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+In file included from project.h:167,
+                 from ed.cpp:20:
+binder.h:41:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   41 |   const uintptr_t GetBinding() {return Binding;}
+      |   ^~~~~
+In file included from project.h:168,
+                 from ed.cpp:20:
+em.h:145:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  145 |   const uintptr_t InstallOneshotTimer (uint64_t);
+      |   ^~~~~
+em.h:146:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  146 |   const uintptr_t ConnectToServer (const char *, int, const char *, int);
+      |   ^~~~~
+em.h:147:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  147 |   const uintptr_t ConnectToUnixServer (const char *);
+      |   ^~~~~
+em.h:149:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  149 |   const uintptr_t CreateTcpServer (const char *, int);
+      |   ^~~~~
+em.h:150:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  150 |   const uintptr_t OpenDatagramSocket (const char *, int);
+      |   ^~~~~
+em.h:151:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 |   const uintptr_t CreateUnixDomainServer (const char*);
+      |   ^~~~~
+em.h:152:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  152 |   const uintptr_t AttachSD (SOCKET);
+      |   ^~~~~
+em.h:153:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  153 |   const uintptr_t OpenKeyboard();
+      |   ^~~~~
+em.h:155:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  155 |   const uintptr_t Socketpair (char* const*);
+      |   ^~~~~
+em.h:161:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  161 |   const uintptr_t AttachFD (SOCKET, bool);
+      |   ^~~~~
+em.h:178:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  178 |   const uintptr_t WatchFile (const char*);
+      |   ^~~~~
+em.h:187:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  187 |   const uintptr_t WatchPid (int);
+      |   ^~~~~
+In file included from project.h:172,
+                 from ed.cpp:20:
+eventmachine.h:54:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   54 |  const uintptr_t evma_install_oneshot_timer (uint64_t milliseconds);
+      |  ^~~~~
+eventmachine.h:55:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   55 |  const uintptr_t evma_connect_to_server (const char *bind_addr, int bind_port, const char *server, int port);
+      |  ^~~~~
+eventmachine.h:56:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   56 |  const uintptr_t evma_connect_to_unix_server (const char *server);
+      |  ^~~~~
+eventmachine.h:58:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   58 |  const uintptr_t evma_attach_fd (int file_descriptor, int watch_mode);
+      |  ^~~~~
+eventmachine.h:73:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   73 |  const uintptr_t evma_create_tcp_server (const char *address, int port);
+      |  ^~~~~
+eventmachine.h:74:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   74 |  const uintptr_t evma_create_unix_domain_server (const char *filename);
+      |  ^~~~~
+eventmachine.h:75:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   75 |  const uintptr_t evma_attach_sd (int sd);
+      |  ^~~~~
+eventmachine.h:76:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   76 |  const uintptr_t evma_open_datagram_socket (const char *server, int port);
+      |  ^~~~~
+eventmachine.h:77:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   77 |  const uintptr_t evma_open_keyboard();
+      |  ^~~~~
+In file included from project.h:172,
+                 from ed.cpp:20:
+eventmachine.h:119:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  119 |  const uintptr_t evma_popen (char * const*cmd_strings);
+      |  ^~~~~
+eventmachine.h:121:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  121 |  const uintptr_t evma_watch_filename (const char *fname);
+      |  ^~~~~
+eventmachine.h:124:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  124 |  const uintptr_t evma_watch_pid (int);
+      |  ^~~~~
+ed.cpp: In member function ‘virtual void LoopbreakDescriptor::Write()’:
+ed.cpp:1518:6: warning: function might be candidate for attribute ‘noreturn’ [-Wsuggest-attribute=noreturn]
+ 1518 | void LoopbreakDescriptor::Write()
+      |      ^~~~~~~~~~~~~~~~~~~
+ed.cpp: In member function ‘virtual void AcceptorDescriptor::Write()’:
+ed.cpp:1654:6: warning: function might be candidate for attribute ‘noreturn’ [-Wsuggest-attribute=noreturn]
+ 1654 | void AcceptorDescriptor::Write()
+      |      ^~~~~~~~~~~~~~~~~~
+ed.cpp: In member function ‘virtual void InotifyDescriptor::Write()’:
+ed.cpp:2093:6: warning: function might be candidate for attribute ‘noreturn’ [-Wsuggest-attribute=noreturn]
+ 2093 | void InotifyDescriptor::Write()
+      |      ^~~~~~~~~~~~~~~~~
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling em.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+In file included from project.h:167,
+                 from em.cpp:23:
+binder.h:41:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   41 |   const uintptr_t GetBinding() {return Binding;}
+      |   ^~~~~
+In file included from project.h:168,
+                 from em.cpp:23:
+em.h:145:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  145 |   const uintptr_t InstallOneshotTimer (uint64_t);
+      |   ^~~~~
+em.h:146:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  146 |   const uintptr_t ConnectToServer (const char *, int, const char *, int);
+      |   ^~~~~
+em.h:147:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  147 |   const uintptr_t ConnectToUnixServer (const char *);
+      |   ^~~~~
+em.h:149:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  149 |   const uintptr_t CreateTcpServer (const char *, int);
+      |   ^~~~~
+em.h:150:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  150 |   const uintptr_t OpenDatagramSocket (const char *, int);
+      |   ^~~~~
+em.h:151:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 |   const uintptr_t CreateUnixDomainServer (const char*);
+      |   ^~~~~
+em.h:152:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  152 |   const uintptr_t AttachSD (SOCKET);
+      |   ^~~~~
+em.h:153:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  153 |   const uintptr_t OpenKeyboard();
+      |   ^~~~~
+em.h:155:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  155 |   const uintptr_t Socketpair (char* const*);
+      |   ^~~~~
+em.h:161:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  161 |   const uintptr_t AttachFD (SOCKET, bool);
+      |   ^~~~~
+em.h:178:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  178 |   const uintptr_t WatchFile (const char*);
+      |   ^~~~~
+em.h:187:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  187 |   const uintptr_t WatchPid (int);
+      |   ^~~~~
+In file included from project.h:172,
+                 from em.cpp:23:
+eventmachine.h:54:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   54 |  const uintptr_t evma_install_oneshot_timer (uint64_t milliseconds);
+      |  ^~~~~
+eventmachine.h:55:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   55 |  const uintptr_t evma_connect_to_server (const char *bind_addr, int bind_port, const char *server, int port);
+      |  ^~~~~
+eventmachine.h:56:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   56 |  const uintptr_t evma_connect_to_unix_server (const char *server);
+      |  ^~~~~
+eventmachine.h:58:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   58 |  const uintptr_t evma_attach_fd (int file_descriptor, int watch_mode);
+      |  ^~~~~
+eventmachine.h:73:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   73 |  const uintptr_t evma_create_tcp_server (const char *address, int port);
+      |  ^~~~~
+eventmachine.h:74:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   74 |  const uintptr_t evma_create_unix_domain_server (const char *filename);
+      |  ^~~~~
+eventmachine.h:75:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   75 |  const uintptr_t evma_attach_sd (int sd);
+      |  ^~~~~
+eventmachine.h:76:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   76 |  const uintptr_t evma_open_datagram_socket (const char *server, int port);
+      |  ^~~~~
+eventmachine.h:77:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   77 |  const uintptr_t evma_open_keyboard();
+      |  ^~~~~
+In file included from project.h:172,
+                 from em.cpp:23:
+eventmachine.h:119:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  119 |  const uintptr_t evma_popen (char * const*cmd_strings);
+      |  ^~~~~
+eventmachine.h:121:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  121 |  const uintptr_t evma_watch_filename (const char *fname);
+      |  ^~~~~
+eventmachine.h:124:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  124 |  const uintptr_t evma_watch_pid (int);
+      |  ^~~~~
+em.cpp:1145:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 1145 | const uintptr_t EventMachine_t::InstallOneshotTimer (uint64_t milliseconds)
+      | ^~~~~
+em.cpp:1167:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 1167 | const uintptr_t EventMachine_t::ConnectToServer (const char *bind_addr, int bind_port, const char *server, int port)
+      | ^~~~~
+em.cpp:1358:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 1358 | const uintptr_t EventMachine_t::ConnectToUnixServer (const char *server)
+      | ^~~~~
+em.cpp:1428:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 1428 | const uintptr_t EventMachine_t::AttachFD (SOCKET fd, bool watch_mode)
+      | ^~~~~
+em.cpp:1577:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 1577 | const uintptr_t EventMachine_t::CreateTcpServer (const char *server, int port)
+      | ^~~~~
+em.cpp:1637:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 1637 | const uintptr_t EventMachine_t::OpenDatagramSocket (const char *address, int port)
+      | ^~~~~
+em.cpp:1912:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 1912 | const uintptr_t EventMachine_t::CreateUnixDomainServer (const char *filename)
+      | ^~~~~
+em.cpp:1976:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 1976 | const uintptr_t EventMachine_t::AttachSD (SOCKET sd_accept)
+      | ^~~~~
+em.cpp:2012:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 2012 | const uintptr_t EventMachine_t::Socketpair (char * const * cmd_strings)
+      | ^~~~~
+em.cpp:2075:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 2075 | const uintptr_t EventMachine_t::OpenKeyboard()
+      | ^~~~~
+em.cpp:2128:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 2128 | const uintptr_t EventMachine_t::WatchPid (int pid UNUSED)
+      | ^~~~~
+em.cpp:2176:1: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+ 2176 | const uintptr_t EventMachine_t::WatchFile (const char *fpath)
+      | ^~~~~
+em.cpp: In member function ‘void EventMachine_t::SignalLoopBreaker()’:
+em.cpp:316:14: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  316 |  (void)write (LoopBreakerWriter, "", 1);
+      |        ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+em.cpp: In member function ‘void EventMachine_t::_ReadLoopBreaker()’:
+em.cpp:1109:13: warning: ignoring return value of ‘ssize_t read(int, void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+ 1109 |  (void)read (LoopBreakerReader, buffer, sizeof(buffer));
+      |        ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+em.cpp: In member function ‘void EventMachine_t::_RunKqueueOnce()’:
+em.cpp:765:6: warning: function might be candidate for attribute ‘noreturn’ [-Wsuggest-attribute=noreturn]
+  765 | void EventMachine_t::_RunKqueueOnce()
+      |      ^~~~~~~~~~~~~~
+em.cpp: In member function ‘const uintptr_t EventMachine_t::WatchPid(int)’:
+em.cpp:2128:17: warning: function might be candidate for attribute ‘noreturn’ [-Wsuggest-attribute=noreturn]
+ 2128 | const uintptr_t EventMachine_t::WatchPid (int pid UNUSED)
+      |                 ^~~~~~~~~~~~~~
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling kb.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+In file included from project.h:167,
+                 from kb.cpp:20:
+binder.h:41:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   41 |   const uintptr_t GetBinding() {return Binding;}
+      |   ^~~~~
+In file included from project.h:168,
+                 from kb.cpp:20:
+em.h:145:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  145 |   const uintptr_t InstallOneshotTimer (uint64_t);
+      |   ^~~~~
+em.h:146:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  146 |   const uintptr_t ConnectToServer (const char *, int, const char *, int);
+      |   ^~~~~
+em.h:147:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  147 |   const uintptr_t ConnectToUnixServer (const char *);
+      |   ^~~~~
+em.h:149:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  149 |   const uintptr_t CreateTcpServer (const char *, int);
+      |   ^~~~~
+em.h:150:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  150 |   const uintptr_t OpenDatagramSocket (const char *, int);
+      |   ^~~~~
+em.h:151:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 |   const uintptr_t CreateUnixDomainServer (const char*);
+      |   ^~~~~
+em.h:152:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  152 |   const uintptr_t AttachSD (SOCKET);
+      |   ^~~~~
+em.h:153:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  153 |   const uintptr_t OpenKeyboard();
+      |   ^~~~~
+em.h:155:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  155 |   const uintptr_t Socketpair (char* const*);
+      |   ^~~~~
+em.h:161:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  161 |   const uintptr_t AttachFD (SOCKET, bool);
+      |   ^~~~~
+em.h:178:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  178 |   const uintptr_t WatchFile (const char*);
+      |   ^~~~~
+em.h:187:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  187 |   const uintptr_t WatchPid (int);
+      |   ^~~~~
+In file included from project.h:172,
+                 from kb.cpp:20:
+eventmachine.h:54:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   54 |  const uintptr_t evma_install_oneshot_timer (uint64_t milliseconds);
+      |  ^~~~~
+eventmachine.h:55:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   55 |  const uintptr_t evma_connect_to_server (const char *bind_addr, int bind_port, const char *server, int port);
+      |  ^~~~~
+eventmachine.h:56:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   56 |  const uintptr_t evma_connect_to_unix_server (const char *server);
+      |  ^~~~~
+eventmachine.h:58:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   58 |  const uintptr_t evma_attach_fd (int file_descriptor, int watch_mode);
+      |  ^~~~~
+eventmachine.h:73:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   73 |  const uintptr_t evma_create_tcp_server (const char *address, int port);
+      |  ^~~~~
+eventmachine.h:74:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   74 |  const uintptr_t evma_create_unix_domain_server (const char *filename);
+      |  ^~~~~
+eventmachine.h:75:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   75 |  const uintptr_t evma_attach_sd (int sd);
+      |  ^~~~~
+eventmachine.h:76:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   76 |  const uintptr_t evma_open_datagram_socket (const char *server, int port);
+      |  ^~~~~
+eventmachine.h:77:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   77 |  const uintptr_t evma_open_keyboard();
+      |  ^~~~~
+In file included from project.h:172,
+                 from kb.cpp:20:
+eventmachine.h:119:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  119 |  const uintptr_t evma_popen (char * const*cmd_strings);
+      |  ^~~~~
+eventmachine.h:121:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  121 |  const uintptr_t evma_watch_filename (const char *fname);
+      |  ^~~~~
+eventmachine.h:124:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  124 |  const uintptr_t evma_watch_pid (int);
+      |  ^~~~~
+kb.cpp: In member function ‘virtual void KeyboardDescriptor::Read()’:
+kb.cpp:77:13: warning: ignoring return value of ‘ssize_t read(int, void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+   77 |  (void)read (GetSocket(), &c, 1);
+      |        ~~~~~^~~~~~~~~~~~~~~~~~~~
+kb.cpp: In member function ‘virtual void KeyboardDescriptor::Write()’:
+kb.cpp:53:6: warning: function might be candidate for attribute ‘noreturn’ [-Wsuggest-attribute=noreturn]
+   53 | void KeyboardDescriptor::Write()
+      |      ^~~~~~~~~~~~~~~~~~
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling page.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+In file included from project.h:167,
+                 from page.cpp:21:
+binder.h:41:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   41 |   const uintptr_t GetBinding() {return Binding;}
+      |   ^~~~~
+In file included from project.h:168,
+                 from page.cpp:21:
+em.h:145:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  145 |   const uintptr_t InstallOneshotTimer (uint64_t);
+      |   ^~~~~
+em.h:146:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  146 |   const uintptr_t ConnectToServer (const char *, int, const char *, int);
+      |   ^~~~~
+em.h:147:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  147 |   const uintptr_t ConnectToUnixServer (const char *);
+      |   ^~~~~
+em.h:149:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  149 |   const uintptr_t CreateTcpServer (const char *, int);
+      |   ^~~~~
+em.h:150:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  150 |   const uintptr_t OpenDatagramSocket (const char *, int);
+      |   ^~~~~
+em.h:151:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 |   const uintptr_t CreateUnixDomainServer (const char*);
+      |   ^~~~~
+em.h:152:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  152 |   const uintptr_t AttachSD (SOCKET);
+      |   ^~~~~
+em.h:153:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  153 |   const uintptr_t OpenKeyboard();
+      |   ^~~~~
+em.h:155:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  155 |   const uintptr_t Socketpair (char* const*);
+      |   ^~~~~
+em.h:161:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  161 |   const uintptr_t AttachFD (SOCKET, bool);
+      |   ^~~~~
+em.h:178:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  178 |   const uintptr_t WatchFile (const char*);
+      |   ^~~~~
+em.h:187:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  187 |   const uintptr_t WatchPid (int);
+      |   ^~~~~
+In file included from project.h:172,
+                 from page.cpp:21:
+eventmachine.h:54:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   54 |  const uintptr_t evma_install_oneshot_timer (uint64_t milliseconds);
+      |  ^~~~~
+eventmachine.h:55:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   55 |  const uintptr_t evma_connect_to_server (const char *bind_addr, int bind_port, const char *server, int port);
+      |  ^~~~~
+eventmachine.h:56:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   56 |  const uintptr_t evma_connect_to_unix_server (const char *server);
+      |  ^~~~~
+eventmachine.h:58:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   58 |  const uintptr_t evma_attach_fd (int file_descriptor, int watch_mode);
+      |  ^~~~~
+eventmachine.h:73:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   73 |  const uintptr_t evma_create_tcp_server (const char *address, int port);
+      |  ^~~~~
+eventmachine.h:74:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   74 |  const uintptr_t evma_create_unix_domain_server (const char *filename);
+      |  ^~~~~
+eventmachine.h:75:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   75 |  const uintptr_t evma_attach_sd (int sd);
+      |  ^~~~~
+eventmachine.h:76:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   76 |  const uintptr_t evma_open_datagram_socket (const char *server, int port);
+      |  ^~~~~
+eventmachine.h:77:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   77 |  const uintptr_t evma_open_keyboard();
+      |  ^~~~~
+In file included from project.h:172,
+                 from page.cpp:21:
+eventmachine.h:119:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  119 |  const uintptr_t evma_popen (char * const*cmd_strings);
+      |  ^~~~~
+eventmachine.h:121:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  121 |  const uintptr_t evma_watch_filename (const char *fname);
+      |  ^~~~~
+eventmachine.h:124:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  124 |  const uintptr_t evma_watch_pid (int);
+      |  ^~~~~
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling pipe.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+In file included from project.h:167,
+                 from pipe.cpp:20:
+binder.h:41:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   41 |   const uintptr_t GetBinding() {return Binding;}
+      |   ^~~~~
+In file included from project.h:168,
+                 from pipe.cpp:20:
+em.h:145:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  145 |   const uintptr_t InstallOneshotTimer (uint64_t);
+      |   ^~~~~
+em.h:146:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  146 |   const uintptr_t ConnectToServer (const char *, int, const char *, int);
+      |   ^~~~~
+em.h:147:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  147 |   const uintptr_t ConnectToUnixServer (const char *);
+      |   ^~~~~
+em.h:149:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  149 |   const uintptr_t CreateTcpServer (const char *, int);
+      |   ^~~~~
+em.h:150:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  150 |   const uintptr_t OpenDatagramSocket (const char *, int);
+      |   ^~~~~
+em.h:151:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 |   const uintptr_t CreateUnixDomainServer (const char*);
+      |   ^~~~~
+em.h:152:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  152 |   const uintptr_t AttachSD (SOCKET);
+      |   ^~~~~
+em.h:153:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  153 |   const uintptr_t OpenKeyboard();
+      |   ^~~~~
+em.h:155:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  155 |   const uintptr_t Socketpair (char* const*);
+      |   ^~~~~
+em.h:161:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  161 |   const uintptr_t AttachFD (SOCKET, bool);
+      |   ^~~~~
+em.h:178:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  178 |   const uintptr_t WatchFile (const char*);
+      |   ^~~~~
+em.h:187:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  187 |   const uintptr_t WatchPid (int);
+      |   ^~~~~
+In file included from project.h:172,
+                 from pipe.cpp:20:
+eventmachine.h:54:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   54 |  const uintptr_t evma_install_oneshot_timer (uint64_t milliseconds);
+      |  ^~~~~
+eventmachine.h:55:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   55 |  const uintptr_t evma_connect_to_server (const char *bind_addr, int bind_port, const char *server, int port);
+      |  ^~~~~
+eventmachine.h:56:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   56 |  const uintptr_t evma_connect_to_unix_server (const char *server);
+      |  ^~~~~
+eventmachine.h:58:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   58 |  const uintptr_t evma_attach_fd (int file_descriptor, int watch_mode);
+      |  ^~~~~
+eventmachine.h:73:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   73 |  const uintptr_t evma_create_tcp_server (const char *address, int port);
+      |  ^~~~~
+eventmachine.h:74:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   74 |  const uintptr_t evma_create_unix_domain_server (const char *filename);
+      |  ^~~~~
+eventmachine.h:75:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   75 |  const uintptr_t evma_attach_sd (int sd);
+      |  ^~~~~
+eventmachine.h:76:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   76 |  const uintptr_t evma_open_datagram_socket (const char *server, int port);
+      |  ^~~~~
+eventmachine.h:77:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   77 |  const uintptr_t evma_open_keyboard();
+      |  ^~~~~
+In file included from project.h:172,
+                 from pipe.cpp:20:
+eventmachine.h:119:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  119 |  const uintptr_t evma_popen (char * const*cmd_strings);
+      |  ^~~~~
+eventmachine.h:121:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  121 |  const uintptr_t evma_watch_filename (const char *fname);
+      |  ^~~~~
+eventmachine.h:124:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  124 |  const uintptr_t evma_watch_pid (int);
+      |  ^~~~~
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling rubymain.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+In file included from project.h:167,
+                 from rubymain.cpp:20:
+binder.h:41:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   41 |   const uintptr_t GetBinding() {return Binding;}
+      |   ^~~~~
+In file included from project.h:168,
+                 from rubymain.cpp:20:
+em.h:145:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  145 |   const uintptr_t InstallOneshotTimer (uint64_t);
+      |   ^~~~~
+em.h:146:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  146 |   const uintptr_t ConnectToServer (const char *, int, const char *, int);
+      |   ^~~~~
+em.h:147:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  147 |   const uintptr_t ConnectToUnixServer (const char *);
+      |   ^~~~~
+em.h:149:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  149 |   const uintptr_t CreateTcpServer (const char *, int);
+      |   ^~~~~
+em.h:150:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  150 |   const uintptr_t OpenDatagramSocket (const char *, int);
+      |   ^~~~~
+em.h:151:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 |   const uintptr_t CreateUnixDomainServer (const char*);
+      |   ^~~~~
+em.h:152:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  152 |   const uintptr_t AttachSD (SOCKET);
+      |   ^~~~~
+em.h:153:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  153 |   const uintptr_t OpenKeyboard();
+      |   ^~~~~
+em.h:155:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  155 |   const uintptr_t Socketpair (char* const*);
+      |   ^~~~~
+em.h:161:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  161 |   const uintptr_t AttachFD (SOCKET, bool);
+      |   ^~~~~
+em.h:178:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  178 |   const uintptr_t WatchFile (const char*);
+      |   ^~~~~
+em.h:187:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  187 |   const uintptr_t WatchPid (int);
+      |   ^~~~~
+In file included from project.h:172,
+                 from rubymain.cpp:20:
+eventmachine.h:54:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   54 |  const uintptr_t evma_install_oneshot_timer (uint64_t milliseconds);
+      |  ^~~~~
+eventmachine.h:55:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   55 |  const uintptr_t evma_connect_to_server (const char *bind_addr, int bind_port, const char *server, int port);
+      |  ^~~~~
+eventmachine.h:56:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   56 |  const uintptr_t evma_connect_to_unix_server (const char *server);
+      |  ^~~~~
+eventmachine.h:58:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   58 |  const uintptr_t evma_attach_fd (int file_descriptor, int watch_mode);
+      |  ^~~~~
+eventmachine.h:73:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   73 |  const uintptr_t evma_create_tcp_server (const char *address, int port);
+      |  ^~~~~
+eventmachine.h:74:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   74 |  const uintptr_t evma_create_unix_domain_server (const char *filename);
+      |  ^~~~~
+eventmachine.h:75:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   75 |  const uintptr_t evma_attach_sd (int sd);
+      |  ^~~~~
+eventmachine.h:76:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   76 |  const uintptr_t evma_open_datagram_socket (const char *server, int port);
+      |  ^~~~~
+eventmachine.h:77:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   77 |  const uintptr_t evma_open_keyboard();
+      |  ^~~~~
+In file included from project.h:172,
+                 from rubymain.cpp:20:
+eventmachine.h:119:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  119 |  const uintptr_t evma_popen (char * const*cmd_strings);
+      |  ^~~~~
+eventmachine.h:121:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  121 |  const uintptr_t evma_watch_filename (const char *fname);
+      |  ^~~~~
+eventmachine.h:124:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  124 |  const uintptr_t evma_watch_pid (int);
+      |  ^~~~~
+rubymain.cpp: In function ‘VALUE t_get_peername(VALUE, VALUE)’:
+rubymain.cpp:480:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+  480 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_get_sockname(VALUE, VALUE)’:
+rubymain.cpp:499:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+  499 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_connect_server(VALUE, VALUE, VALUE)’:
+rubymain.cpp:659:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+  659 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_bind_connect_server(VALUE, VALUE, VALUE, VALUE, VALUE)’:
+rubymain.cpp:680:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+  680 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_invoke_popen(VALUE, VALUE)’:
+rubymain.cpp:992:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+  992 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_watch_filename(VALUE, VALUE)’:
+rubymain.cpp:1027:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+ 1027 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_unwatch_filename(VALUE, VALUE)’:
+rubymain.cpp:1042:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+ 1042 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_watch_pid(VALUE, VALUE)’:
+rubymain.cpp:1058:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+ 1058 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_start_proxy(VALUE, VALUE, VALUE, VALUE, VALUE)’:
+rubymain.cpp:1274:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+ 1274 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_stop_proxy(VALUE, VALUE)’:
+rubymain.cpp:1289:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+ 1289 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_proxied_bytes(VALUE, VALUE)’:
+rubymain.cpp:1303:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+ 1303 |  } catch (std::runtime_error e) {
+      |                              ^
+rubymain.cpp: In function ‘VALUE t_get_idle_time(VALUE, VALUE)’:
+rubymain.cpp:1328:30: warning: catching polymorphic type ‘class std::runtime_error’ by value [-Wcatch-value=]
+ 1328 |  } catch (std::runtime_error e) {
+      |                              ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling ssl.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-int’ is valid for C/ObjC but not for C++
+In file included from project.h:167,
+                 from ssl.cpp:23:
+binder.h:41:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   41 |   const uintptr_t GetBinding() {return Binding;}
+      |   ^~~~~
+In file included from project.h:168,
+                 from ssl.cpp:23:
+em.h:145:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  145 |   const uintptr_t InstallOneshotTimer (uint64_t);
+      |   ^~~~~
+em.h:146:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  146 |   const uintptr_t ConnectToServer (const char *, int, const char *, int);
+      |   ^~~~~
+em.h:147:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  147 |   const uintptr_t ConnectToUnixServer (const char *);
+      |   ^~~~~
+em.h:149:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  149 |   const uintptr_t CreateTcpServer (const char *, int);
+      |   ^~~~~
+em.h:150:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  150 |   const uintptr_t OpenDatagramSocket (const char *, int);
+      |   ^~~~~
+em.h:151:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  151 |   const uintptr_t CreateUnixDomainServer (const char*);
+      |   ^~~~~
+em.h:152:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  152 |   const uintptr_t AttachSD (SOCKET);
+      |   ^~~~~
+em.h:153:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  153 |   const uintptr_t OpenKeyboard();
+      |   ^~~~~
+em.h:155:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  155 |   const uintptr_t Socketpair (char* const*);
+      |   ^~~~~
+em.h:161:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  161 |   const uintptr_t AttachFD (SOCKET, bool);
+      |   ^~~~~
+em.h:178:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  178 |   const uintptr_t WatchFile (const char*);
+      |   ^~~~~
+em.h:187:3: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  187 |   const uintptr_t WatchPid (int);
+      |   ^~~~~
+In file included from project.h:172,
+                 from ssl.cpp:23:
+eventmachine.h:54:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   54 |  const uintptr_t evma_install_oneshot_timer (uint64_t milliseconds);
+      |  ^~~~~
+eventmachine.h:55:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   55 |  const uintptr_t evma_connect_to_server (const char *bind_addr, int bind_port, const char *server, int port);
+      |  ^~~~~
+eventmachine.h:56:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   56 |  const uintptr_t evma_connect_to_unix_server (const char *server);
+      |  ^~~~~
+eventmachine.h:58:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   58 |  const uintptr_t evma_attach_fd (int file_descriptor, int watch_mode);
+      |  ^~~~~
+eventmachine.h:73:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   73 |  const uintptr_t evma_create_tcp_server (const char *address, int port);
+      |  ^~~~~
+eventmachine.h:74:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   74 |  const uintptr_t evma_create_unix_domain_server (const char *filename);
+      |  ^~~~~
+eventmachine.h:75:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   75 |  const uintptr_t evma_attach_sd (int sd);
+      |  ^~~~~
+eventmachine.h:76:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   76 |  const uintptr_t evma_open_datagram_socket (const char *server, int port);
+      |  ^~~~~
+eventmachine.h:77:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+   77 |  const uintptr_t evma_open_keyboard();
+      |  ^~~~~
+In file included from project.h:172,
+                 from ssl.cpp:23:
+eventmachine.h:119:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  119 |  const uintptr_t evma_popen (char * const*cmd_strings);
+      |  ^~~~~
+eventmachine.h:121:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  121 |  const uintptr_t evma_watch_filename (const char *fname);
+      |  ^~~~~
+eventmachine.h:124:2: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  124 |  const uintptr_t evma_watch_pid (int);
+      |  ^~~~~
+cc1plus: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1plus: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1plus: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+linking shared-object rubyeventmachine.so
+
+current directory: /home/jordan/Programming/galblog/vendor/bundle/ruby/2.6.0/gems/eventmachine-1.2.7/ext
+make "DESTDIR=" install
+make: /usr/bin/mkdir: Command not found
+make: *** [Makefile:202: .sitearchdir.time] Error 127
+
+make install failed, exit code 2
