@@ -12,21 +12,21 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "תאריך פרסום", name: "date", widget: "datetime"}
-      - {label: 'כותרת', name: 'title', widget: 'string'}
-      - {label: "תמונת נושא", name: "featured_image", widget: "image"}
-      - {label: "המתכון", name: "body", widget: "markdown"}
+      - { label: "תאריך פרסום", name: "date", widget: "datetime" }
+      - { label: 'כותרת', name: 'title', widget: 'string' }
+      - { label: "תמונת נושא", name: "featured_image", widget: "image" }
+      - label: "המתכון"
+        name: "recipe"
+        widget: "object"
+        collapsed: false
+        fields:
+          - { label: "כמויות", name: "servings", widget: "string" }
+          - { label: "זמן הכנה", name: "prep", widget: "string" }
+          - { label: "זמן בישול", name: "cook", widget: "string" }
+          - { label: "רכיבים", name: "ingredients_markdown", widget: "markdown" }
+          - { label: "הוראות הכנה", name: "directions_markdown", widget: "markdown" }
+      - { label: "תוכן העמוד", name: "body", widget: "markdown" }
       - label: "קטגוריות"
         name: "categories"
         widget: "list"
         field: {label: 'קטגוריה', name: 'category', widget: 'string'}
-      - label: "המתכון"
-        name: "recipe"
-        widget: "object"
-        collapsed: true
-        fields:
-          - {label: "כמויות", name: "servings", widget: "string"}
-          - {label: "זמן הכנה", name: "prep", widget: "string"}
-          - {label: "זמן בישול", name: "cook", widget: "string"}
-          - {label: "רכיבים", name: "ingredients_markdown", widget: "markdown"}
-          - {label: "הוראות הכנה", name: "directions_markdown", widget: "markdown"}
