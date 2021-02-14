@@ -20,3 +20,13 @@ collections:
         name: "categories"
         widget: "list"
         field: {label: 'קטגוריה', name: 'category', widget: 'string'}
+      - label: "המתכון"
+        name: "recipe"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "כמויות", name: "servings", widget: "string"}
+          - {label: "זמן הכנה", name: "prep", widget: "string"}
+          - {label: "זמן בישול", name: "cook", widget: "string"}
+          - {label: "רכיבים", name: "ingredients_markdown", widget: "markdown"}
+          - {label: "הוראות הכנה", name: "directions_markdown", widget: "markdown"}
