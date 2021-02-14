@@ -12,29 +12,11 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - { label: 'כותרת הפעולה', name: 'title', widget: 'string' }
-      # - { label: 'תקציר הפעולה', name: 'desc', widget: 'string' }
-      # - { label: 'משך הפעולה (במילים)', name: 'length', widget: 'string' }
-      # - { label: 'תאריך פרסום', name: 'date', widget: 'datetime' }
-      # - label: "מטרות"
-      #   name: "goals"
-      #   widget: "list"
-      #   field: {label: 'מטרה', name: 'goal', widget: 'string'}
-      # - label: "מתודות"
-      #   name: "course"
-      #   widget: "list"
-      #   field: {label: 'מתודה', name: 'method', widget: 'markdown'}
-      # - label: "ציוד"
-      #   name: "equipment"
-      #   widget: "list"
-      #   field: {label: 'ציוד', name: 'equipment', widget: 'string'}
-      # - label: "נושאים"
-      #   name: "categories"
-      #   widget: "list"
-      #   field: {label: 'נושא', name: 'category', widget: 'string'}
-      # - label: "תגיות"
-      #   name: "tags"
-      #   widget: "list"
-      #   field: {label: 'תגית', name: 'tag', widget: 'string'}
-      # - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {label: "תאריך פרסום", name: "date", widget: "datetime"}
+      - {label: 'כותרת', name: 'title', widget: 'string'}
+      - {label: "תמונת נושא", name: "featured_image", widget: "image"}
+      - {label: "המתכון", name: "body", widget: "markdown"}
+      - label: "קטגוריות"
+        name: "categories"
+        widget: "list"
+        field: {label: 'קטגוריה', name: 'category', widget: 'string'}
